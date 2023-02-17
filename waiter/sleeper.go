@@ -16,7 +16,7 @@ type Sleeper struct {
 
 func NewSleeper(u interfaces.ConfigProvider, l interfaces.Logger) interfaces.Waiter {
 	config := u.GetConfig()
-	sleepDuration := time.Duration(5) * time.Second
+	sleepDuration := time.Duration(0) * time.Second
 	return Sleeper{
 		logger:        l,
 		sleepDuration: sleepDuration,
