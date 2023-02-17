@@ -26,7 +26,7 @@ func NewHashVerifier(q interfaces.FlushingQueue, r interfaces.HashReader, l inte
 func (v HashVerifier) Start() {
 	err := v.loadUserProvidedHashes()
 	if err != nil {
-		panic(err)
+		fmt.Println("Verifing Provided Hashes failed. Please make sure you have provided a list file.")
 	}
 
 	for {
